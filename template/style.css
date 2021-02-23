@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 62.5% = 62.5/100 * 16 = 10px */
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    height: 100vh;
+    background-color: #fff;
+}
+
+/* Basic Layout */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* Reusable components */
+h1 {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff8000;
+}
+
+button {
+    outline: none;
+}
+
+/* Icons */
+.fa {
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.fa:hover {
+    color: #6A983C;
+}
+
+/* Header component */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    margin-right: 3rem;
+}
+
+header a {
+    padding: 1rem;
+}
+
+a.brand {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #6A983C;
+}
+
+.row.center {
+    justify-content: center;
+}
+
+/* Image */
+img {
+    border-radius: 1rem;
+}
+
+img.medium {
+    max-width: 25rem;
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Card */
+.card {
+    border: 0.1rem #c0c0c0 solid;
+    border-radius: 1.5rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-body h2 {
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.quantity {
+    font-size: 2rem;
+}
+
+.card-body > * {
+    margin-bottom: 0.5rem;
+}
+
+.price-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.cartbtn {
+    margin-top: 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #6A983C;
+    padding: .5rem 1rem;
+    border-radius: 2.5rem;
+    border: 1px solid #6A983C;
+    transition: .3s all;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.cartbtn:hover {
+    background-color: #6A983C;
+    color: white;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+}
